@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio Personal BVR</title>
+
+  <!-- Favicon: coloca aquí tu icono de fueguito en la carpeta img (SVG y/o PNG) -->
+  <link rel="icon" type="image/svg+xml" href="img/fuego.png" />
+  <link rel="shortcut icon" href="img/fueguito.png" />
+  <meta name="theme-color" content="#ff6b00" />
+
+  <!-- Enlaza el CSS externo -->
+  <link rel="stylesheet" href="CSSportafolio.css" />
+</head>
+<body>
+  <!-- ===========================
+       Header / Hero principal
+       =========================== -->
+  <header class="hero" id="inicio">
+    <nav class="nav container">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <div class="logo" aria-hidden="true"><img src="img/ia.png" alt="Logo IA" class="footer-logo" style="width:40px;height:auto;display:block;margin:6px 0;"></div>
+        <span class="brand-name">Brayan R</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content container">
+      <!-- Card con estilos embebidos (CSS señalado abajo) -->
+      <div class="hero-card">
+        <div class="hero-text">
+          <h1 class="nombre">Brayan Valencia Rivera</h1>
+          <p class="titulo">Desarrollador Web Junior — HTML & CSS</p>
+          <p class="correo">brayanvalenciar82@gmail.com</p>
+        </div>
+
+        
+      </div>
+
+      <!-- Imagen/logo temporal a la derecha -->
+      <div class="hero-image" aria-hidden="true">
+        <!-- Si quieres cambiar por una imagen real, sustituye el <div> por <img src="ruta"> -->
+        <div class="placeholder-logo" style="width:220px; height:220px; overflow:hidden; border-radius:12px; display:flex; align-items:center; justify-content:center; background:#f3f3f3;">
+          <img src="img/gre.jpg" alt="Logo IA" style="width:100%; height:110%; object-fit:cover; display:block;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===========================
+       Sobre Mí
+       =========================== -->
+  <section id="sobre" class="section container">
+    <h2 class="section-title">Sobre mí</h2>
+
+    <div class="about-grid">
+      <!-- Tarjeta con biografía -->
+      <article class="card bio-card" aria-labelledby="bio-title">
+        <h3 id="bio-title">Quién soy</h3>
+        <p>
+         ¡¡Hola!! Me llamo Brayan y soy un estudiante de segundo año del ciclo formativo de Sistemas Microinformáticos y Redes 
+         (SMR), con un gran interés por la tecnología, la informática y el funcionamiento interno 
+         de los equipos. 
+        </p>
+
+        <p>
+          Soy una persona responsable, comprometida y con una actitud positiva hacia el aprendizaje. Aunque al principio me pongo algo nervioso al exponer, siempre busco mejorar mis habilidades de comunicación y participación en grupo. Me considero empático y asertivo, valores que aplico tanto en el trabajo en equipo como en la convivencia diaria.
+          Estoy motivado por seguir desarrollando mis competencias técnicas y personales, con el objetivo de crecer profesionalmente en el ámbito de la informática y las redes, aportando soluciones eficientes, sostenibles y adaptadas a las necesidades de cada usuario.
+        </p>
+      </article>
+
+      <!-- Redes sociales con iconos SVG -->
+      <aside class="card socials">
+        <h3>Sígueme</h3>
+        <div class="social-icons" aria-hidden="false" style="display:flex;justify-content:center;align-items:center;gap:12px;width:100%;"></div>
+          <!-- GitHub -->
+          <a class="icon" href="https://github.com/BrayanR82" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="28" height="28" role="img" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.1 7.61 10.57.56.1.76-.24.76-.53 0-.26-.01-1-.02-1.95-3.09.67-3.74-1.49-3.74-1.49-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .17 1.58-.75 1.58-.75.98-1.68 2.56-1.2 3.19-.92.1-.72.39-1.2.71-1.48-2.47-.28-5.06-1.24-5.06-5.53 0-1.22.44-2.21 1.17-2.99-.12-.28-.51-1.43.11-2.98 0 0 .96-.31 3.15 1.14.92-.26 1.91-.39 2.89-.39s1.97.13 2.89.39c2.19-1.45 3.15-1.14 3.15-1.14.62 1.55.23 2.7.11 2.98.73.78 1.17 1.77 1.17 2.99 0 4.3-2.6 5.24-5.08 5.52.4.35.75 1.03.75 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.77.53 4.42-1.47 7.61-5.64 7.61-10.57C23.25 5.48 18.27.5 12 .5z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="icon" href="https://www.linkedin.com/in/brayanvalenciar" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="28" height="28" role="img" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4v15h-4v-15zM9.5 8.5h3.83v2.07h.05c.53-.99 1.83-2.07 3.77-2.07 4.03 0 4.78 2.65 4.78 6.09v8.91h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17v8.03h-4v-15z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a class="icon" href="https://www.instagram.com/brayanvr82/?hl=es" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="28" height="28" role="img" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.8.244 2.22.41.54.22.92.49 1.33.9.41.41.68.79.9 1.33.17.42.35 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.244 1.8-.41 2.22-.22.54-.49.92-.9 1.33-.41.41-.79.68-1.33.9-.42.17-1.05.35-2.22.41-1.27.06-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.8-.244-2.22-.41-.54-.22-.92-.49-1.33-.9-.41-.41-.68-.79-.9-1.33-.17-.42-.35-1.05-.41-2.22C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.244-1.8.41-2.22.22-.54.49-.92.9-1.33.41-.41.79-.68 1.33-.9.42-.17 1.05-.35 2.22-.41C8.416 2.212 8.8 2.2 12 2.2zm0 2.1c-3.12 0-3.48.012-4.7.068-.98.047-1.52.217-1.88.362-.47.18-.8.395-1.15.74-.35.35-.56.68-.74 1.15-.145.36-.315.9-.362 1.88C2.712 8.52 2.7 8.88 2.7 12s.012 3.48.068 4.7c.047.98.217 1.52.362 1.88.18.47.395.8.74 1.15.35.35.68.56 1.15.74.36.145.9.315 1.88.362 1.22.057 1.58.068 4.7.068s3.48-.012 4.7-.068c.98-.047 1.52-.217 1.88-.362.47-.18.8-.395 1.15-.74.35-.35.56-.68.74-1.15.145-.36.315-.9.362-1.88.057-1.22.068-1.58.068-4.7s-.012-3.48-.068-4.7c-.047-.98-.217-1.52-.362-1.88-.18-.47-.395-.8-.74-1.15-.35-.35-.68-.56-1.15-.74-.36-.145-.9-.315-1.88-.362C15.48 4.312 15.12 4.3 12 4.3zM12 7.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2.1a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.1-2.4a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24z"/>
+            </svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Galería de Proyectos
+       =========================== -->
+  <section id="proyectos" class="section container">
+    <h2 class="section-title">Proyectos</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <img src="img/proy1.jpg" alt="Imagen proyecto 1" class="project-thumb" />
+        <div class="project-body">
+          <h3>Silicon Valley</h3>
+          <p>Proyecto en el cual se habló sobre la tecnología de la Silicon Valley y Bill Gates.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="img/proy2.jpg" alt="Imagen proyecto 2" class="project-thumb" />
+        <div class="project-body">
+          <h3>Red - Grupo Sorolla</h3>
+          <p>Simule la red del colegio en Cisco Packet Tracer y la creación de los planos.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="img/proy3.jpg" alt="Imagen proyecto 3" class="project-thumb" />
+        <div class="project-body">
+          <h3>Red - Edificio</h3>
+          <p>Simule la red de un edificio en Cisco Packet Tracer y la creación de los planos.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="img/proy4.jpg" alt="Imagen proyecto 4" class="project-thumb" />
+        <div class="project-body">
+          <h3>ODS 13</h3>
+          <p>Creamos un robot que contribuye al ODS 13, con tecnología innovadora.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="img/proy5.jpg" alt="Imagen proyecto 5" class="project-thumb" />
+        <div class="project-body">
+          <h3>Página Motos</h3>
+          <p>Cree una página la cual contenía información de las motos de alto CC.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="img/proy6.jpg" alt="Imagen proyecto 6" class="project-thumb" />
+        <div class="project-body">
+          <h3>Página Grupo Sorolla</h3>
+          <p>Cree una página de reemplazo a la página oficial del colegio Grupo Sorolla.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Lightbox / modal -->
+    <div id="lightbox" class="lightbox-overlay" aria-hidden="true" role="dialog">
+      <div class="lightbox-content" role="document">
+        <img id="lightbox-image" src="" alt="" />
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        const overlay = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-image');
+
+        function openLightbox(src, alt){
+          lbImg.src = src;
+          lbImg.alt = alt || '';
+          overlay.classList.add('active');
+          overlay.setAttribute('aria-hidden','false');
+          // prevenir scroll de fondo
+          document.documentElement.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(){
+          overlay.classList.remove('active');
+          overlay.setAttribute('aria-hidden','true');
+          lbImg.src = '';
+          lbImg.alt = '';
+          document.documentElement.style.overflow = '';
+        }
+
+        // Delegación: clic en cualquier miniatura
+        document.addEventListener('click', function(e){
+          const img = e.target.closest && e.target.closest('.project-thumb');
+          if(img){
+            openLightbox(img.src, img.alt);
+          }
+        });
+
+        // Cerrar al clicar fuera de la imagen (solo si el target es el overlay)
+        overlay.addEventListener('click', function(e){
+          if(e.target === overlay) closeLightbox();
+        });
+
+        // Evitar que un clic sobre la imagen cierre el modal (por si se cambia la lógica)
+        lbImg.addEventListener('click', function(e){
+          e.stopPropagation();
+        });
+
+        // Cerrar con Escape
+        document.addEventListener('keydown', function(e){
+          if(e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
+        });
+      })();
+    </script>
+  </section>
+
+  <!-- ===========================
+       Habilidades y Conocimientos
+       =========================== -->
+  <section id="habilidades" class="section container">
+    <h2 class="section-title">Habilidades</h2>
+
+    <div class="skills-wrap">
+      <div class="skills-grid">
+        <!-- Cada tarjeta de habilidad -->
+        <div class="skill-card">
+          <h4>HTML</h4>
+          <p>Maquetación semántica, accesibilidad (ARIA) y buenas prácticas SEO.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--p:80%"><span>80%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>CSS</h4>
+          <p>Diseño responsivo con Flexbox y Grid, animaciones y estilos modernos.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--p:70%"><span>70%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>VirtualBox</h4>
+          <p>Creación y gestión de máquinas virtuales, snapshots y redes NAT/Host-Only.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--p:100%"><span>100%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Servidores</h4>
+          <p>Administración básica de servidores Linux, despliegue y configuración de servicios.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--p:95%"><span>95%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Cisco Packet Tracer</h4>
+          <p>Diseño y simulación de redes, configuración de routers y switches, y pruebas de topologías.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--p:80%"><span>80%</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Ofimática</h4>
+          <p>Word, Excel y PowerPoint: creación de documentos, hojas de cálculo y presentaciones; uso de fórmulas y plantillas.</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--p:100%"><span>100%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Formulario de Contacto
+       =========================== -->
+  <section id="contacto" class="section container">
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="contact-grid">
+      <div class="contact-intro card">
+        <img src="img/cont.jpg" alt="Foto de contacto" style="border-radius:12px; max-width:100%; height:auto; display:block; margin-bottom:12px;">
+        <h3>¿Quieres contratarme? ¡Hablemos!</h3>
+        <p>Rellena el formulario y te responderé lo antes posible. Escríbeme sin ningún compromiso.</p>
+      </div>
+
+      <form class="contact-form card" novalidate>
+        <!-- Nombre -->
+        <label for="name">Nombre <span aria-hidden="true">*</span></label>
+        <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+
+        <!-- Correo -->
+        <label for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" placeholder="tu@ejemplo.com" required />
+
+        <!-- Mensaje -->
+        <label for="message">Mensaje <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" placeholder="Escribe tu mensaje..." rows="6" required></textarea>
+
+        <!-- Nota: no hay backend; el botón es solo visual -->
+        <button type="submit" class="btn">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Footer
+       =========================== -->
+  <footer class="site-footer">
+    <div class="container footer-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:24px 0;">
+      <p style="margin:0;"><b>© 2025 | Brayan Valencia R</b></p>
+
+      <!-- Iconos sociales centrados -->
+      <div class="social-icons" aria-label="Redes sociales" style="display:flex;gap:12px;align-items:center;justify-content:center;">
+        <a class="icon" href="https://www.instagram.com/brayanvr82/?hl=es" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="28" height="28" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.8.244 2.22.41.54.22.92.49 1.33.9.41.41.68.79.9 1.33.17.42.35 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.244 1.8-.41 2.22-.22.54-.49.92-.9 1.33-.41.41-.79.68-1.33.9-.42.17-1.05.35-2.22.41-1.27.06-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.8-.244-2.22-.41-.54-.22-.92-.49-1.33-.9-.41-.41-.68-.79-.9-1.33-.17-.42-.35-1.05-.41-2.22C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.244-1.8.41-2.22.22-.54.49-.92.9-1.33.41-.41.79-.68 1.33-.9.42-.17 1.05-.35 2.22-.41C8.416 2.212 8.8 2.2 12 2.2zm0 2.1c-3.12 0-3.48.012-4.7.068-.98.047-1.52.217-1.88.362-.47.18-.8.395-1.15.74-.35.35-.56.68-.74 1.15-.145.36-.315.9-.362 1.88C2.712 8.52 2.7 8.88 2.7 12s.012 3.48.068 4.7c.047.98.217 1.52.362 1.88.18.47.395.8.74 1.15.35.35.68.56 1.15.74.36.145.9.315 1.88.362 1.22.057 1.58.068 4.7.068s3.48-.012 4.7-.068c.98-.047 1.52-.217 1.88-.362.47-.18.8-.395 1.15-.74.35-.35.56-.68.74-1.15.145-.36.315-.9.362-1.88.057-1.22.068-1.58.068-4.7s-.012-3.48-.068-4.7c-.047-.98-.217-1.52-.362-1.88-.18-.47-.395-.8-.74-1.15-.35-.35-.68-.56-1.15-.74-.36-.145-.9-.315-1.88-.362C15.48 4.312 15.12 4.3 12 4.3zM12 7.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2.1a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.1-2.4a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24z"/>
+          </svg>
+        </a>
+
+        <a class="icon" href="https://github.com/BrayanR82" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="28" height="28" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.1 7.61 10.57.56.1.76-.24.76-.53 0-.26-.01-1-.02-1.95-3.09.67-3.74-1.49-3.74-1.49-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .17 1.58-.75 1.58-.75.98-1.68 2.56-1.2 3.19-.92.1-.72.39-1.2.71-1.48-2.47-.28-5.06-1.24-5.06-5.53 0-1.22.44-2.21 1.17-2.99-.12-.28-.51-1.43.11-2.98 0 0 .96-.31 3.15 1.14.92-.26 1.91-.39 2.89-.39s1.97.13 2.89.39c2.19-1.45 3.15-1.14 3.15-1.14.62 1.55.23 2.7.11 2.98.73.78 1.17 1.77 1.17 2.99 0 4.3-2.6 5.24-5.08 5.52.4.35.75 1.03.75 2.08 0 1.5-.01 2.71-.01 3.08 0 .29.2.64.77.53 4.42-1.47 7.61-5.64 7.61-10.57C23.25 5.48 18.27.5 12 .5z"/>
+          </svg>
+        </a>
+
+        <a class="icon" href="https://www.linkedin.com/in/brayanvalenciar" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="28" height="28" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4v15h-4v-15zM9.5 8.5h3.83v2.07h.05c.53-.99 1.83-2.07 3.77-2.07 4.03 0 4.78 2.65 4.78 6.09v8.91h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17v8.03h-4v-15z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
