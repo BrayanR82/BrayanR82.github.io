@@ -1,3 +1,73 @@
+<!--
+Archivo: index.html
+Propósito: Página de portafolio personal "Portafolio Personal BVR" (Brayan Valencia R).
+Autor: Brayan Valencia R
+Ruta original: /C:/Users/BRAYANSTEVENVALENCIA/.../PORTAFOLIO/index.html
+Idioma: es (attribute html lang="es")
+Resumen:
+  Documento HTML que presenta un portafolio personal con las siguientes secciones:
+    - Head: metadatos, viewport, título, favicons, color tema y enlace a CSS externo (estilos/CSSportafolio.css).
+    - Header / Hero: navegación principal con enlaces ancla, marca (logo + nombre) y bloque hero con tarjeta informativa e imagen.
+    - Sobre mí: biografía y enlaces a redes sociales con iconos SVG.
+    - Proyectos: galería de proyectos en forma de tarjetas; incluye un lightbox modal para ampliar miniaturas.
+    - Habilidades: conjunto de tarjetas con barras de progreso (valores inline mediante variable CSS --p).
+    - Contacto: presentación + formulario de contacto (formulario sin backend; botón solo visual).
+    - Footer: créditos y redes sociales duplicadas centradas.
+    - Script: pequeño IIFE que implementa el lightbox (apertura, cierre por clic en overlay, Escape y prevención de scroll de fondo).
+
+Notas de implementación y buenas prácticas aplicadas:
+  - Semántica: uso de <header>, <section>, <article>, <aside>, <nav>, <footer> y títulos (h1..h4) para estructura lógica.
+  - Accesibilidad:
+      * html lang="es" presente para asistentes de lectura.
+      * aria-label y aria-hidden usados en elementos relevantes (p.ej. navegación, logo, lightbox).
+      * El modal cuenta con role="dialog" y role="document" y se actualiza aria-hidden al abrir/cerrar.
+      * Enlaces y botones incluyen atributos title/aria-label en iconos sociales.
+  - Progressive enhancement: lightbox implementado con JavaScript no crítico (funcionalidad adicional); la galería sigue mostrando imágenes si JS está desactivado.
+  - Recomendación de rendimiento: imágenes referenciadas desde carpeta img; se recomienda optimizarlas y usar formatos modernos (WebP/AVIF) y lazy-loading.
+
+Mejoras y tareas recomendadas (TODO):
+  - Formularios:
+      * Implementar validación adicional del lado del cliente y servidor.
+      * Añadir un backend o integrar formulario con servicio (e.g., Formspree, Netlify Forms) para envío real.
+  - Accesibilidad avanzada del modal:
+      * Gestionar el foco al abrir el lightbox (mover foco al elemento modal) y restaurarlo al cerrarlo.
+      * Implementar "focus trap" dentro del modal para evitar navegación fuera del diálogo mientras esté activo.
+      * Añadir aria-modal="true" y etiquetar adecuadamente (aria-labelledby/aria-describedby) si procede.
+  - Imágenes:
+      * Añadir atributos srcset/width/height y loading="lazy" para mejorar CLS y rendimiento.
+      * Proveer descripciones alt completas y apropiadas para cada imagen.
+  - Navegación responsive:
+      * Añadir un menú colapsable para dispositivos móviles (hamburger) con control aria-expanded.
+      * Asegurar que los enlaces de navegación sean accesibles mediante teclado.
+  - Estilos y diseño:
+      * Comprobar contraste de color y accesibilidad WCAG (contraste texto/fondo).
+      * Externalizar estilos inline y variables CSS cuando sea posible.
+  - SEO y metadatos:
+      * Añadir meta description relevante y metadatos Open Graph / Twitter Cards para compartir.
+      * Validar estructura de encabezados y añadir microdatos o JSON-LD si se desea mejorar presencia en buscadores.
+  - Seguridad y despliegue:
+      * Servir recursos mediante HTTPS.
+      * Añadir políticas CSP si procede.
+      * Configurar cache y compresión en servidor para mejorar tiempos de carga.
+  - Internacionalización:
+      * Si se prevé versión multilingüe, centralizar textos y usar detección/selección de idioma.
+
+Observaciones del script del lightbox:
+  - Ventajas: sencillo, usa delegación de eventos y previene scroll del documento al abrir.
+  - Recomendaciones:
+      * Comprobar que overlay y lightbox-image sean únicos en la página.
+      * Vigilar rutas relativas de imágenes (uso de src directo puede duplicar carga; considerar usar data-src para versiones optimizadas).
+      * Controlar el tamaño máximo de la imagen dentro del modal para evitar overflow en pantallas pequeñas.
+
+Licencia y uso:
+  - Contenido y assets propiedad del autor (Brayan Valencia R) salvo indicación contraria.
+  - Al reutilizar elementos o iconos, verificar licencias de las imágenes y SVGs incorporadas.
+
+Contacto:
+  - El autor presenta su correo en el hero (brayanvalenciar82@gmail.com) y perfiles públicos (GitHub, LinkedIn, Instagram) en las secciones de redes.
+
+Fin del comentario de documentación.
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>

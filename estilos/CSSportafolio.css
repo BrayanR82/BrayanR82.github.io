@@ -1,6 +1,6 @@
 /* ===========================
-   Reset y variables
-   =========================== */
+  Reset y variables
+  =========================== */
 :root{
   --bg: #f7f8fb;
   --card: #ffffff;
@@ -33,8 +33,8 @@ html,body{
 }
 
 /* ===========================
-   Hero / Header
-   =========================== */
+  Hero / Encabezado
+  =========================== */
 .hero{
   padding:2rem 0 3.5rem;
   background-image: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(99,102,241,0.03)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');
@@ -82,86 +82,81 @@ html,body{
   color:var(--accent-2);
 }
 
+/* cuadro transparente */
+.hero-card{
+  /* fondo semitransparente para dejar ver el fondo detrás */
+  background: rgba(255, 255, 255, 0.72);
+  /* borde sutil para definición sobre imágenes de fondo */
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 14px;                 /* bordes redondeados */
+  box-shadow: 0 12px 30px rgba(18, 24, 32, 0.12); /* sombra */
+  padding: 20px 24px;                  /* separación interior */
+  max-width: 520px;                    /* ancho máximo */
+  width: 100%;
+  color: #0b1220;
+  margin: 8px 0;
+  /* animación de entrada */
+  animation: card-in 560ms cubic-bezier(.2,.9,.3,1) both;
+  /* transición para hover */
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  align-self: flex-start;
+  /* desenfoque del fondo detrás para mejorar legibilidad (soporte Safari) */
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  backdrop-filter: blur(6px) saturate(120%);
+  /* evita que el fondo translúcido se mezcle con el borde */
+  background-clip: padding-box;
+}
 
-  
-          /* cuadro transparente */
+/* efecto al pasar el ratón */
+.hero-card:hover{
+  transform: translateY(-6px) scale(1.01); /* elevación sutil */
+  box-shadow: 0 20px 40px rgba(18, 24, 32, 0.16); /* sombra mayor */
+}
 
+/* animación flotante muy sutil (opcional, larga duración) */
+.hero-card.animated-float{
+  animation: float 6s ease-in-out 1s infinite alternate;
+}
 
-          .hero-card{
-        /* fondo semitransparente para dejar ver el fondo detrás */
-        background: rgba(255, 255, 255, 0.72);
-        /* borde sutil para definición sobre imágenes de fondo */
-        border: 1px solid rgba(255, 255, 255, 0.38);
-        border-radius: 14px;                 /* bordes redondeados */
-        box-shadow: 0 12px 30px rgba(18, 24, 32, 0.12); /* sombra */
-        padding: 20px 24px;                  /* separación interior */
-        max-width: 520px;                    /* ancho máximo */
-        width: 100%;
-        color: #0b1220;
-        margin: 8px 0;
-        /* animación de entrada */
-        animation: card-in 560ms cubic-bezier(.2,.9,.3,1) both;
-        /* transición para hover */
-        transition: transform 220ms ease, box-shadow 220ms ease;
-        align-self: flex-start;
-        /* desenfoque del fondo detrás para mejorar legibilidad (soporte Safari) */
-        -webkit-backdrop-filter: blur(6px) saturate(120%);
-        backdrop-filter: blur(6px) saturate(120%);
-        /* evita que el fondo translúcido se mezcle con el borde */
-        background-clip: padding-box;
-          }
+/* estilos internos del texto */
+.hero-text { text-align: left; }
+.hero-text .nombre{
+  font-size: 1.45rem;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.hero-text .titulo{
+  margin: 0 0 8px 0;
+  color: #55595f;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+.hero-text .correo{
+  margin: 0;
+  color: #2b2f36;
+  font-size: 0.92rem;
+  opacity: 0.9;
+  word-break: break-word;
+}
 
-          /* CSS: efecto al pasar el ratón */
-          .hero-card:hover{
-        transform: translateY(-6px) scale(1.01); /* elevación sutil */
-        box-shadow: 0 20px 40px rgba(18, 24, 32, 0.16); /* sombra mayor */
-          }
+/* keyframes para entrada */
+@keyframes card-in{
+  from{ opacity: 0; transform: translateY(10px) scale(.995); }
+  to  { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-          /* CSS: animación flotante muy sutil (opcional, larga duración) */
-          .hero-card.animated-float{
-        animation: float 6s ease-in-out 1s infinite alternate;
-          }
+/* keyframes para flotación sutil (si se activa .animated-float) */
+@keyframes float{
+  from{ transform: translateY(0); }
+  to  { transform: translateY(-6px); }
+}
 
-          /* CSS: estilos internos del texto */
-          .hero-text { text-align: left; }
-          .hero-text .nombre{
-        font-size: 1.45rem;
-        margin: 0 0 6px 0;
-        font-weight: 700;
-        letter-spacing: -0.2px;
-          }
-          .hero-text .titulo{
-        margin: 0 0 8px 0;
-        color: #55595f;
-        font-size: 0.98rem;
-        font-weight: 500;
-          }
-          .hero-text .correo{
-        margin: 0;
-        color: #2b2f36;
-        font-size: 0.92rem;
-        opacity: 0.9;
-        word-break: break-word;
-          }
-
-          /* CSS: keyframes para entrada */
-          @keyframes card-in{
-        from{ opacity: 0; transform: translateY(10px) scale(.995); }
-        to  { opacity: 1; transform: translateY(0) scale(1); }
-          }
-
-          /* CSS: keyframes para flotación sutil (si se activa .animated-float) */
-          @keyframes float{
-        from{ transform: translateY(0); }
-        to  { transform: translateY(-6px); }
-          }
-
-          /* CSS: ajuste en móviles para que no parezca gigante */
-          @media (max-width: 520px){
-        .hero-card{ padding: 16px; border-radius: 12px; }
-        .hero-text .nombre{ font-size: 1.25rem; }
-          }
-      
+/* ajuste en móviles para que no parezca gigante */
+@media (max-width: 520px){
+  .hero-card{ padding: 16px; border-radius: 12px; }
+  .hero-text .nombre{ font-size: 1.25rem; }
+}
 
 /* Hero content */
 .hero-content{
@@ -183,7 +178,7 @@ html,body{
   font-weight:600;
 }
 
-/* Placeholder logo */
+/* Logo de marcador de posición */
 .placeholder-logo{
   width:220px;
   height:220px;
@@ -197,8 +192,8 @@ html,body{
 }
 
 /* ===========================
-   Secciones generales
-   =========================== */
+  Secciones generales
+  =========================== */
 .section{
   padding:3rem 0;
 }
@@ -226,7 +221,7 @@ html,body{
 }
 .bio-card p{ margin:0.6rem 0; color:var(--muted) }
 
-/* Social icons */
+/* Iconos sociales */
 .social-icons{
   display:flex;
   gap:0.6rem;
@@ -251,8 +246,8 @@ html,body{
 }
 
 /* ===========================
-   Projects grid
-   =========================== */
+  Proyectos - rejilla
+  =========================== */
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -283,157 +278,157 @@ html,body{
 }
 
 /* ===========================
-   Skills
-   =========================== */
+  Habilidades
+  =========================== */
 
-      /* Estilos scoped para la sección de habilidades */
-      #habilidades {
-        margin-top: 24px;
-      }
+  /* Estilos con alcance para la sección de habilidades */
+  #habilidades {
+   margin-top: 24px;
+  }
 
-      /* Contenedor blanco con bordes redondeados */
-      #habilidades .skills-wrap {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 20px;
-        box-shadow: 0 10px 300px rgba(12, 18, 30, 0.06);
-        border: 1px solid rgba(10, 10, 10, 0.03);
-      }
+  /* Contenedor blanco con bordes redondeados */
+  #habilidades .skills-wrap {
+   background: #ffffff;
+   border-radius: 16px;
+   padding: 20px;
+   box-shadow: 0 10px 300px rgba(12, 18, 30, 0.06);
+   border: 1px solid rgba(10, 10, 10, 0.03);
+  }
 
-      #habilidades .section-title {
-        margin: 0 0 12px;
-      }
+  #habilidades .section-title {
+   margin: 0 0 12px;
+  }
 
-      /* Grid responsivo de tarjetas */
-      #habilidades .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        gap: 16px;
-        align-items: start;
-      }
+  /* Grid responsivo de tarjetas */
+  #habilidades .skills-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+   gap: 16px;
+   align-items: start;
+  }
 
-      /* Tarjeta de habilidad */
-      #habilidades .skill-card {
-        background: transparent; /* la tarjeta "flota" sobre el fondo blanco del wrapper */
-        padding: 14px;
-        border-radius: 12px;
-        transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
-        transform-origin: center;
-        opacity: 0;
-        transform: translateY(14px);
-        animation: cardIn .6s forwards;
-        position: relative;
-      }
+  /* Tarjeta de habilidad */
+  #habilidades .skill-card {
+   background: transparent; /* la tarjeta "flota" sobre el fondo blanco del wrapper */
+   padding: 14px;
+   border-radius: 12px;
+   transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
+   transform-origin: center;
+   opacity: 0;
+   transform: translateY(14px);
+   animation: cardIn .6s forwards;
+   position: relative;
+  }
 
-      /* Elevación al pasar el cursor */
-      #habilidades .skill-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 40px rgba(10, 20, 40, 0.06);
-      }
+  /* Elevación al pasar el cursor */
+  #habilidades .skill-card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 18px 40px rgba(10, 20, 40, 0.06);
+  }
 
-      /* Títulos y texto */
-      #habilidades .skill-card h4 {
-        margin: 0 0 6px;
-        font-size: 1.05rem;
-        color: #0f1724;
-      }
+  /* Títulos y texto */
+  #habilidades .skill-card h4 {
+   margin: 0 0 6px;
+   font-size: 1.05rem;
+   color: #0f1724;
+  }
 
-      #habilidades .skill-card p {
-        margin: 0 0 12px;
-        color: #475066;
-        font-size: 0.95rem;
-        line-height: 1.35;
-      }
+  #habilidades .skill-card p {
+   margin: 0 0 12px;
+   color: #475066;
+   font-size: 0.95rem;
+   line-height: 1.35;
+  }
 
-      /* Barra contenedora */
-      #habilidades .skill-bar {
-        background: linear-gradient(90deg, #f3f5f8, #fbfcfe);
-        border-radius: 999px;
-        padding: 4px;
-        height: 23px;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-      }
+  /* Barra contenedora */
+  #habilidades .skill-bar {
+   background: linear-gradient(90deg, #f3f5f8, #fbfcfe);
+   border-radius: 999px;
+   padding: 4px;
+   height: 23px;
+   box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  }
 
-      /* Progreso — usa la variable --p (ej: --p:80%) */
-      #habilidades .skill-progress {
-        --p: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        height: 100%;
-        width: 0;                    /* parte desde 0 y se anima hasta var(--p) */
-        border-radius: 999px;
-        padding-right: 10px;
-        box-sizing: border-box;
-        color: #fff;
-        font-weight: 700;
-        font-size: 0.85rem;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(90deg, #ff8a00 0%, #ff4d6d 100%);
-        box-shadow: 0 6px 18px rgba(255,77,77,0.08);
-        transition: width 1.1s cubic-bezier(.2,.9,.3,1);
-        animation: fillBar 1s forwards;
-      }
+  /* Progreso — usa la variable --p (ej: --p:80%) */
+  #habilidades .skill-progress {
+   --p: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   height: 100%;
+   width: 0;                    /* parte desde 0 y se anima hasta var(--p) */
+   border-radius: 999px;
+   padding-right: 10px;
+   box-sizing: border-box;
+   color: #fff;
+   font-weight: 700;
+   font-size: 0.85rem;
+   position: relative;
+   overflow: hidden;
+   background: linear-gradient(90deg, #ff8a00 0%, #ff4d6d 100%);
+   box-shadow: 0 6px 18px rgba(255,77,77,0.08);
+   transition: width 1.1s cubic-bezier(.2,.9,.3,1);
+   animation: fillBar 1s forwards;
+  }
 
-      /* Brillo/stripes animado sobre la barra para dar dinamismo */
-      #habilidades .skill-progress::before {
-        content: "";
-        position: absolute;
-        left: -40%;
-        top: 0;
-        bottom: 0;
-        width: 40%;
-        background: linear-gradient(115deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06), rgba(255,255,255,0.18));
-        transform: skewX(-18deg);
-        filter: blur(6px);
-        opacity: 0.6;
-        animation: moveShine 2.6s linear infinite;
-        pointer-events: none;
-      }
+  /* Brillo/stripes animado sobre la barra para dar dinamismo */
+  #habilidades .skill-progress::before {
+   content: "";
+   position: absolute;
+   left: -40%;
+   top: 0;
+   bottom: 0;
+   width: 40%;
+   background: linear-gradient(115deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06), rgba(255,255,255,0.18));
+   transform: skewX(-18deg);
+   filter: blur(6px);
+   opacity: 0.6;
+   animation: moveShine 2.6s linear infinite;
+   pointer-events: none;
+  }
 
-      /* Asegurar que el texto quede encima del brillo */
-      #habilidades .skill-progress span {
-        position: relative;
-        z-index: 2;
-      }
+  /* Asegurar que el texto quede encima del brillo */
+  #habilidades .skill-progress span {
+   position: relative;
+   z-index: 2;
+  }
 
-      /* Animaciones */
-      @keyframes fillBar {
-        from { width: 0; }
-        to   { width: var(--p); }
-      }
+  /* Animaciones */
+  @keyframes fillBar {
+   from { width: 0; }
+   to   { width: var(--p); }
+  }
 
-      @keyframes moveShine {
-        0% { left: -40%; }
-        50% { left: 60%; }
-        100% { left: 120%; }
-      }
+  @keyframes moveShine {
+   0% { left: -40%; }
+   50% { left: 60%; }
+   100% { left: 120%; }
+  }
 
-      @keyframes cardIn {
-        to { opacity: 1; transform: translateY(0); }
-      }
+  @keyframes cardIn {
+   to { opacity: 1; transform: translateY(0); }
+  }
 
-      /* Stagger en la entrada de las tarjetas (hasta 8 tarjetas seguidas) */
-      #habilidades .skill-card:nth-child(1)  { animation-delay: .08s; }
-      #habilidades .skill-card:nth-child(2)  { animation-delay: .16s; }
-      #habilidades .skill-card:nth-child(3)  { animation-delay: .24s; }
-      #habilidades .skill-card:nth-child(4)  { animation-delay: .32s; }
-      #habilidades .skill-card:nth-child(5)  { animation-delay: .40s; }
-      #habilidades .skill-card:nth-child(6)  { animation-delay: .48s; }
-      #habilidades .skill-card:nth-child(7)  { animation-delay: .56s; }
-      #habilidades .skill-card:nth-child(8)  { animation-delay: .64s; }
+  /* Stagger en la entrada de las tarjetas (hasta 8 tarjetas seguidas) */
+  #habilidades .skill-card:nth-child(1)  { animation-delay: .08s; }
+  #habilidades .skill-card:nth-child(2)  { animation-delay: .16s; }
+  #habilidades .skill-card:nth-child(3)  { animation-delay: .24s; }
+  #habilidades .skill-card:nth-child(4)  { animation-delay: .32s; }
+  #habilidades .skill-card:nth-child(5)  { animation-delay: .40s; }
+  #habilidades .skill-card:nth-child(6)  { animation-delay: .48s; }
+  #habilidades .skill-card:nth-child(7)  { animation-delay: .56s; }
+  #habilidades .skill-card:nth-child(8)  { animation-delay: .64s; }
 
-      /* Pequeñas adaptaciones para pantallas muy pequeñas */
-      @media (max-width: 420px) {
-        #habilidades .skills-wrap { padding: 14px; }
-        #habilidades .skill-bar { height: 14px; }
-        #habilidades .skill-progress { font-size: 0.78rem; padding-right: 8px; }
-      }
+  /* Pequeñas adaptaciones para pantallas muy pequeñas */
+  @media (max-width: 420px) {
+   #habilidades .skills-wrap { padding: 14px; }
+   #habilidades .skill-bar { height: 14px; }
+   #habilidades .skill-progress { font-size: 0.78rem; padding-right: 8px; }
+  }
 
 /* ===========================
-   Contacto
-   =========================== */
+  Contacto
+  =========================== */
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -447,11 +442,11 @@ html,body{
 .placeholder-logo img,
 .project-card img,
 .contact-intro img{
-    will-change: transform;
-    transition: transform var(--transition), filter var(--transition);
-    animation: floatY 6s ease-in-out infinite;
-    transform-origin: center;
-    backface-visibility: hidden;
+   will-change: transform;
+   transition: transform var(--transition), filter var(--transition);
+   animation: floatY 6s ease-in-out infinite;
+   transform-origin: center;
+   backface-visibility: hidden;
 }
 
 /* Pausa/realce al pasar el ratón */
@@ -459,18 +454,18 @@ html,body{
 .placeholder-logo img:hover,
 .project-card:hover img,
 .contact-intro img:hover{
-    animation-play-state: paused;
-    transform: translateY(-10px) scale(1.04);
-    filter: drop-shadow(0 18px 30px rgba(2,6,23,0.08));
+   animation-play-state: paused;
+   transform: translateY(-10px) scale(1.04);
+   filter: drop-shadow(0 18px 30px rgba(2,6,23,0.08));
 }
 
 /* Keyframes de "flotar" */
 @keyframes floatY{
-    0%   { transform: translateY(0) rotate(0deg) scale(1); }
-    25%  { transform: translateY(-6px) rotate(-0.4deg) scale(1.01); }
-    50%  { transform: translateY(0) rotate(0deg) scale(1); }
-    75%  { transform: translateY(6px) rotate(0.4deg) scale(0.99); }
-    100% { transform: translateY(0) rotate(0deg) scale(1); }
+   0%   { transform: translateY(0) rotate(0deg) scale(1); }
+   25%  { transform: translateY(-6px) rotate(-0.4deg) scale(1.01); }
+   50%  { transform: translateY(0) rotate(0deg) scale(1); }
+   75%  { transform: translateY(6px) rotate(0.4deg) scale(0.99); }
+   100% { transform: translateY(0) rotate(0deg) scale(1); }
 }
 .contact-form label{
   display:block;
@@ -518,8 +513,8 @@ html,body{
 }
 
 /* ===========================
-   Footer
-   =========================== */
+  Footer
+  =========================== */
 .site-footer{
   background:#0f172a;
   color:#e6eef8;
@@ -531,8 +526,8 @@ html,body{
 .footer-content{ text-align:center }
 
 /* ===========================
-   Responsive
-   =========================== */
+  Responsivo
+  =========================== */
 @media (max-width: 980px){
   .hero-content{ flex-direction:column; gap:1rem; }
   .hero-text{ max-width:100% }
@@ -551,37 +546,37 @@ html,body{
 }
 
 /* ===========================
-   Para abrir las imagenes de los proyectos
-   =========================== */
+  Para abrir las imágenes de los proyectos (lightbox)
+  =========================== */
 
-    .lightbox-overlay {
-        position: fixed;
-        inset: 0;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0,0,0,0.85);
-        z-index: 1200;
-        padding: 20px;
-      }
-    .lightbox-overlay.active { display: flex; }
-      .lightbox-content {
-        max-width: 95vw;
-        max-height: 95vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        outline: none;
-      }
-    .lightbox-content img {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0,0,0,.5);
-        background: #fff;
-      }
+.lightbox-overlay {
+   position: fixed;
+   inset: 0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   background: rgba(0,0,0,0.85);
+   z-index: 1200;
+   padding: 20px;
+  }
+.lightbox-overlay.active { display: flex; }
+  .lightbox-content {
+   max-width: 95vw;
+   max-height: 95vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   outline: none;
+  }
+.lightbox-content img {
+   max-width: 100%;
+   max-height: 100%;
+   border-radius: 8px;
+   box-shadow: 0 10px 30px rgba(0,0,0,.5);
+   background: #fff;
+  }
 
-    /* cursor para indicar se puede cerrar al clicar fuera */
-    .lightbox-overlay:not(.active) { cursor: default; }
+/* cursor para indicar se puede cerrar al clicar fuera */
+.lightbox-overlay:not(.active) { cursor: default; }
 
 /* Fin del CSS */
